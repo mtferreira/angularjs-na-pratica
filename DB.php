@@ -5,9 +5,6 @@
 * via acesso nativo do PHP/PDO.
 * É necessário ter definido as seguintes constantes: DB_NAME, DB_HOST, DB_USER, DB_PASSWORD
 */
-/**
- *
- */
 class DB
 {
     /**
