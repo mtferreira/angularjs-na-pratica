@@ -1,0 +1,14 @@
+{
+    "name": "mtferreira/angularjs-na-pratica",
+    "description": "Projeto para estudos e testes com Angular JS",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "angular",
+        "pratica"
+    ],
+    "homepage": "http://framework.zend.com/",
+    "require": {
+        "php": ">=5.3.3",
+        "slim/slim": "~2.0"
+    }
+}
