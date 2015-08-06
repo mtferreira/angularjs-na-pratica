@@ -1,5 +1,5 @@
 //URL de acesso ao servidor RESTful
-SERVER_URL = "http://localhost/sales-server";
+SERVER_URL = "http://localhost:8081";
 
 //Criação ao $app que é o modulo que representa toda a aplicação
 $app = angular.module('app', []);
