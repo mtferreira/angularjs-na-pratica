@@ -41,13 +41,14 @@ $app.config(function($routeProvider, $httpProvider) {
                 $data = response.data;
                 $error = $data.error;
                 console.error($data);
-                if ($error && $error.text)
+                if ($error && $error.text) {
                     console.log("ERROR: " + $error.text);
-                else {
+                } else {
                     if (response.status = 404) {
                         alert("Erro ao acessar servidor. Página não encontrada. Veja os erros para maiores detalhes ");
-                    } else
+                    } else {
                         alert("ERROR! See log console");
+                    }
                 }
                 return $q.reject(response);
             });
@@ -61,17 +62,17 @@ $app.run(function($rootScope) {
     $rootScope.showLoaderFlag = false;
     //Força que o ícone de acesso ao servidor seja ativado
     $rootScope.showLoader = function() {
-            $rootScope.showLoaderFlag = true;
-        }
-        //Força que o ícone de acesso ao servidor seja desativado
+        $rootScope.showLoaderFlag = true;
+    };
+    //Força que o ícone de acesso ao servidor seja desativado
     $rootScope.hideLoader = function() {
-            $rootScope.showLoaderFlag = false;
-        }
-        //Método que retorna a URL completa de acesso ao servidor.
-        // Evita usar concatenação no controller
+        $rootScope.showLoaderFlag = false;
+    };
+    //Método que retorna a URL completa de acesso ao servidor.
+    // Evita usar concatenação no controller
     $rootScope.server = function(url) {
         return SERVER_URL + url;
-    }
+    };
 });
 //We already have a limitTo filter built-in to angular,
 //let's make a startFrom filter
